@@ -269,22 +269,21 @@
         </p>
     </header>
 
-    <section id="intro" class="container">
+    section id="intro" class="container">
         <h2 class="section-title"><i class="fa-solid fa-magnifying-glass"></i> 1. 演算法介紹</h2>
         <div class="card">
-            <h3><i class="fa-solid fa-circle-info"></i> YOLO 是什麼？</h3>
+            <h3><i class="fa-solid fa-circle-info"></i> 何謂YOLO演算法？</h3>
             <ul style="list-style-type: square;">
-                <li><strong>這個演算法是什麼：</strong>YOLO 是一種開創性的「單階段（One-stage）」即時物件偵測（Object Detection）深度學習模型。</li>
-                <li><strong>主要解決什麼問題：</strong>傳統物件偵測法速度太慢，無法做到即時處理。YOLO 將物件偵測視為單一的回歸問題，大幅提升偵測速度。</li>
+                <li><strong>YOLO是什麼：</strong>主打「快狠準」的AI物體偵測演算法。能在極短的時間內，把畫面中所有東西的位置和種類抓出來</li>
+                <li><strong>主要解決的問題：</strong>傳統物件偵測法需先找出疑似有東西的區塊再逐一辨識，處理速度慢。YOLO將傳統的兩步驟合而為一，大幅提升速度。</li>
                 <li><strong>基本運作流程：</strong>
                     <ol style="margin-top: 10px;">
-                        <li>將輸入影像劃分為 S × S 的網格。</li>
-                        <li>若目標物體的中心落在某網格內，該網格就負責偵測該物體。</li>
-                        <li>網格同時預測多組邊界框（Bounding Boxes）、信心度（Confidence Scores）以及類別機率（Class Probabilities）。</li>
-                        <li>利用 NMS（非極大值抑制）消除重複的框，輸出最終結果。</li>
+                        <li>畫面切割：在照片套用虛擬網格，切成s*s的小格子</li>
+                        <li>格子獨立預測：判斷格子裡有無某物體的中心點，若有則該網格就會負責偵測該物體</li>
+                        <li>NMS篩選：多個網格同時圈到同一物體時，會自動刪除重複、信心度太低的格，只留下最精準的那個</li>
                     </ol>
                 </li>
-                <li><strong>常見應用：</strong>自駕車前方障礙物偵測、智慧型即時路況監控系統、無人商店商品辨識。</li>
+                <li><strong>常見應用：</strong>自駕車前方障礙物偵測、智慧型即時路況監控系統、無人商店商品辨識</li>
             </ul>
         </div>
     </section>
